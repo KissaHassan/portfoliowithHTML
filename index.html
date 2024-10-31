@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container"></div>
+        <nav>
+            <img src="public/OIP-removebg-preview.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Governor Sindh Initiative Student</p>
+            <h1>Hi! This is <span>Kissa Hassan</span> from Governor of</h1>
+            <h1>Sindh's Initiative Program for Web</h1>
+            <h1>development and Metaverse</h1>
+        </div>
+    </div>
+
+    <!------------about---------->
+
+    <div id="about">
+        <div class="container">
+            <h1 class="sub-title">About Me</h1>
+            <p>I am an undergraduate student with a science background, currently
+                broadening my studies by diving into coding. Learning HTML, CSS,
+                TypeScript, and Next.js has been a new and exciting journey for me.
+                The Governor's Initiative for IT has
+                been instrumental in helping me gain valuable knowledge and skills in these areas.
+            </p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>HTML</span></li>
+                    <li><span>CSS</span></li>
+                    <li><span>TypeScript</span></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Seeking opportunities to gain experience</span></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Matriculation (2018)</span></li>
+                    <li><span>Intermediate (2020)</span></li>
+                    <li><span>BS Biotechnology (2025)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!----------------portfolio------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <a href="https://github.com/KissaHassan/milestone2-Resume-by-Kissa-Hassan" target="_blank">milestone2-Resume-by-Kissa-Hassan</a><br><br>
+                <a href="https://github.com/KissaHassan/milestone3" target="_blank">Milestone3</a><br><br>
+                <a href="https://github.com/KissaHassan/dynamicroutingcountryassignment" target="_blank">Dynamic Routing</a><br><br>
+                <a href="https://github.com/KissaHassan/TypeScript-Currency-convertor" target="_blank">Currency Convertor using Typescript</a><br><br>
+                <a href="https://github.com/KissaHassan/TypeScript-45-Exercise-with-Node-JS" target="_blank">45 assignments</a><br><br>
+                <a href="https://github.com/KissaHassan/milestone5" target="_blank">Milestone 5</a><br><br>
+                <a href="https://github.com/KissaHassan/milestone4" target="_blank">Milestone 4</a>
+            </div>
+        </div>
+    </div>
+
+    <!----Contact-->
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">My Contact Info</h1>
+            <div class="contact-info">
+                <p>Contact: 0327-0803077</p>
+                <p>Email: kissah563@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/kissa-hassan-aa29622b7" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>Linkedin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            // Remove 'active-link' from all tab links
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            // Remove 'active-tab' from all tab contents
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            // Add 'active-link' to the clicked tab
+            event.currentTarget.classList.add("active-link");
+            // Show the corresponding tab content
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
